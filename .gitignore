@@ -1,0 +1,7 @@
+# eclipse
+.project
+*.log
+*.md.html
+config/slaves
+config/hbase/hbase-site.xml
+
