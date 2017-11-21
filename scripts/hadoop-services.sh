@@ -25,8 +25,14 @@ echo -e 'status' | $HBASE_HOME/bin/hbase shell
 
 # LINK: https://www.cloudera.com/documentation/enterprise/5-9-x/topics/cdh_ig_hbase_tools.html
 # LINK: https://intellipaat.com/tutorial/hbase-tutorial/performance-tunning/
-# echo "HBase Read Benchmark: using 3 threads"
-# time hbase org.apache.hadoop.hbase.PerformanceEvaluation  randomRead 3
+# LINK: https://superuser.blog/hbase-benchmarking/
+# LINK: http://gbif.blogspot.com/2012/02/performance-evaluation-of-hbase.html
+# echo "HBase Write Benchmark: using 1 thread and no MapReduce"
+# time hbase org.apache.hadoop.hbase.PerformanceEvaluation --nomapred randomWrite 1
 
-# echo "HBase Write Benchmark: using 3 threads and no MapReduce"
-# time hbase org.apache.hadoop.hbase.PerformanceEvaluation --nomapred randomWrite 3
+# echo "HBase Read Benchmark: using 1 thread and no MapReduce"
+# time hbase org.apache.hadoop.hbase.PerformanceEvaluation --nomapred randomRead 1
+
+# echo "HBase Scan Benchmark: using 1 thread"
+# time hbase org.apache.hadoop.hbase.PerformanceEvaluation scan 1
+
