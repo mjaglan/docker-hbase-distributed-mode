@@ -78,9 +78,23 @@ The [hadoop-services.sh](scripts/hadoop-services.sh) is running following comman
 	3 servers, 0 dead, 0.6667 average load
 	```
 
-- (Optional) HBase Read Benchmark
+- (Optional) HBase Write Performance Evaluation
+	```
+	INFO  [main] hbase.PerformanceEvaluation: [RandomWriteTest] Summary of timings (ms): [52297]
+	INFO  [main] hbase.PerformanceEvaluation: [RandomWriteTest]	Min: 52297ms	Max: 52297ms	Avg: 52297ms
+	```
 
-- (Optional) HBase Write Benchmark
+- (Optional) HBase Read Performance Evaluation
+	```
+	INFO  [main] hbase.PerformanceEvaluation: [RandomReadTest]	Summary of timings (ms): [337290]
+	INFO  [main] hbase.PerformanceEvaluation: [RandomReadTest]	Min: 337290ms	Max: 337290ms	Avg: 337290ms
+	```
+- (Optional) HBase Scan Performance Evaluation
+	```
+	HBase Performance Evaluation
+		Elapsed time in milliseconds=204323
+		Row count=1048570
+	```
 
 
 ## Web UI
