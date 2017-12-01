@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <!--
+    Pseudo-Distributed Mode.
+  -->
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://testbed-master:9000/hbase</value>
+  </property>
+ 
+   <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
+
+  <property>
+    <name>hbase.master.hostname</name>
+    <value>testbed-master</value>
+  </property>
+ 
+  <!--
+    Zookeeper Settings
+  --> 
+  <property>
+    <name>hbase.zookeeper.property.clientPort</name>
+    <value>2181</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>__quorum_nodes__</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>hdfs://__master_node__:9000/zookeeper</value>
+  </property>
+</configuration>
+
